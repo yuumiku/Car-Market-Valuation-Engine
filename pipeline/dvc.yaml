@@ -1,0 +1,5 @@
+stages:
+  scrape_automobile_tn:
+    cmd: cd scrapers && scrapy crawl automobile_tn
+    outs:
+      - data/raw/Automobile_tn

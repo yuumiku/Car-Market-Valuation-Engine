@@ -1,0 +1,27 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 26.5.1 
+    hooks:
+      - id: black
+        name: black
+        entry: black
+        language: python
+        types: [python]
+        always_run: false
+        verbose: true
+        args: ["--line-length=88", "--target-version=py38"]
+
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.16.3
+    hooks:
+      - id: ruff
+        verbose: true
+        args: ["--fix", "--line-length=88"]
+
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.9.4
+    hooks:
+      - id: bandit
+        verbose: true
+        args: ["-x", ".env"]
+        additional_dependencies: ["pbr"]

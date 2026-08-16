@@ -1,0 +1,16 @@
+# workflows (WIP)
+.github
+.github/**
+
+# Environment files
+.env
+.env.*
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Raw Data Directory
+data/raw/**
+data/metrics/**
